@@ -1,0 +1,48 @@
+* * * * * * * * * * * * * * * *
+* Стажировка YLab_University  *
+* Вводный Курс                *
+* День 1, ДЗ 1                *
+* * * * * * * * * * * * * * * *
+
+-----Задание-----
+
+Необходимо создать сервис, который управляет кредитными/дебетовыми транзакциями от имени игроков.
+Денежный счет содержит текущий баланс игрока. 
+Баланс можно изменить, зарегистрировав транзакции на счете, либо дебетовые транзакции (удаление средств), либо кредитные транзакции (добавление средств). 
+Создайте REST API и реализацию, которая соответствует описанным ниже требованиям и ограничениям.
+
+Текущий баланс игрока
+Дебет/снятие средств для каждого игрока Дебетовая транзакция будет успешной только в том случае, если на счету достаточно средств (баланс - сумма дебета >= 0). 
+Вызывающая сторона предоставит идентификатор транзакции, который должен быть уникальным для всех транзакций. 
+Если идентификатор транзакции не уникален, операция должна завершиться ошибкой.
+
+Кредит/пополнение на игрока. 
+Вызывающая сторона предоставит идентификатор транзакции, который должен быть уникальным для всех транзакций. 
+Если идентификатор транзакции не уникален, операция должна завершиться ошибкой.
+
+-----Полезные ссылки-----
+
+Onion-архитектура: 
+https://hashdork.com/ru/onion-architecture/ 
+https://medium.com/expedia-group-tech/onion-architecture-deed8a554423
+
+Maven: 
+https://maven.apache.org/guides/
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
+
+Gradle: 
+https://docs.gradle.org/current/userguide/userguide.html https://docs.gradle.org/current/samples/sample_building_java_applications.html
+
+Junit5: 
+https://junit.org/junit5/docs/current/user-guide/
+
+Mockito: 
+https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html https://www.baeldung.com/mockito-series
+
+AssertJ: 
+https://assertj.github.io/doc/
+https://www.baeldung.com/introduction-to-assertj
+
+GitHub: 
+https://github.com
+Java code conventions: https://www.magnumblog.space/java/translating-java-code-conventions
