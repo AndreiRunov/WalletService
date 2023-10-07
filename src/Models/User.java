@@ -1,4 +1,4 @@
-package Model;
+package Models;
 
 import Constants.Role;
 import Constants.Status;
@@ -10,51 +10,59 @@ import java.util.UUID;
 public class User {
     private UUID id;
     private Role role;
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
     private Status status;
     private String firstName;
-    private String sirName;
+    private String lastName;
+    private String login;
+    private String password;
     private long balance;
     private List<Transaction> debetList;
     private List<Transaction> creditList;
 
-    public Role getRole() {
-        return role;
+    @Override
+    public String toString(){
+        return ("UserID: " + this.id +
+                "; Role: " + this.role +
+                "; Last Name: " +  this.lastName +
+                "; First Name: " + this.firstName +
+                "; Balance: " + this.balance);
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public UUID getId() {
+        return id;
+    }
+
+    public Role getRole() {
+        return role;
     }
 
     public Status getStatus() {
         return status;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
-    }
-
     public String getFirstName() {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getSirName() {
-        return sirName;
-    }
-
-    public void setSirName(String sirName) {
-        this.sirName = sirName;
+    public String getLastName() {
+        return lastName;
     }
 
     public long getBalance() {
         return balance;
     }
 
-    public void setBalance(long balance) {
-        this.balance = balance;
+    public List<Transaction> getDebetList() {
+        return debetList;
+    }
+
+    public List<Transaction> getCreditList() {
+        return creditList;
     }
 
 //    private User(Builder builder) {
